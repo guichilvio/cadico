@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Century Gothic', sans-serif;
             scroll-behavior: smooth;
         }
 
@@ -22,7 +22,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background: transparent;
             position: fixed;
             width: 100%;
@@ -33,12 +33,12 @@
         }
 
         .menu.scrolled {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 8px 18px;
+            background: rgba(98, 98, 31, 0.9);
+            padding: 10px 20px;
         }
 
         .menu .logo img {
-            width: 180px;
+            width: 110px;
         }
 
         .menu ul {
@@ -47,13 +47,14 @@
         }
 
         .menu ul li {
-            margin: 0 10px;
+            margin: 0 15px;
         }
 
         .menu ul li a {
             color: white;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: bold;
             transition: color 0.3s ease-in-out;
         }
 
@@ -66,7 +67,7 @@
             background: none;
             border: none;
             color: white;
-            font-size: 28px;
+            font-size: 32px;
             cursor: pointer;
         }
 
@@ -78,7 +79,7 @@
 
         @media (max-width: 900px) {
             .menu {
-                padding: 8px 15px;
+                padding: 10px 18px;
             }
 
             .menu .logo img {
@@ -93,13 +94,14 @@
                 display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 50px;
+                top: 60px;
                 right: 10px;
                 background: rgba(0, 0, 0, 0.9);
-                width: 180px;
+                width: 200px;
                 text-align: center;
-                padding: 8px 0;
-                border-radius: 8px;
+                padding: 10px 0;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
                 transition: all 0.3s ease-in-out;
             }
 
@@ -108,31 +110,20 @@
             }
 
             .menu ul li {
-                margin: 8px 0;
-                padding: 10px 0;
+                margin: 10px 0;
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .menu ul li:last-child {
+                border-bottom: none;
             }
         }
     </style>
-    <script type="text/javascrip">
-        document.addEventListener("DOMContentLoaded", function() {
-            if (window.location.hash) {
-                setTimeout(function() {
-                    const targetElement = document.querySelector(window.location.hash);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 50,
-                            behavior: "smooth"
-                        });
-                    }
-                }, 500);
-            }
-        });
-
+    <script type="text/javascript">
         window.addEventListener('scroll', function() {
             var menu = document.querySelector('.menu');
-            var fondo = document.querySelector('.fondo');
-            var fondoBottom = fondo.offsetTop + fondo.offsetHeight;
-            if (window.scrollY > fondoBottom - 100) {
+            if (window.scrollY > 100) {
                 menu.classList.add('scrolled');
             } else {
                 menu.classList.remove('scrolled');

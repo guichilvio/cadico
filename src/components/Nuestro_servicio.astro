@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios - CADICO</title>
+   
+</head>
+<body>
+    <div id="Servicios"></div>
+    <section class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="contenedor-servicios">
+
+            <div class="servicio">
+                <img src="PT 1.jpg" alt="Desarrollo de Vivienda Horizontal">
+                <h3>Desarrollo de Vivienda Horizontal</h3>
+                <p>
+                    Convertimos proyectos en hogares. Diseñamos y construimos espacios funcionales, 
+                    seguros y de alta calidad para garantizar el bienestar de cada familia.
+                </p>
+            </div>
+           
+            <div class="servicio">
+                <img src="S1.jpg" alt="Desarrollo de Locales Comerciales">
+                <h3>Desarrollo de Locales Comerciales</h3>
+                <p>
+                    Proyectos estratégicos diseñados para potenciar tu negocio, impulsar su crecimiento 
+                    y maximizar su impacto en el mercado.
+                </p>
+            </div>
+
+            <div class="servicio">
+                <img src="S2.jpg" alt="Renta de Bodegas">
+                <h3>Renta de Bodegas</h3>
+                <p>
+                    Espacios diseñados para optimizar el almacenamiento y logística de tu empresa. 
+                    Con seguridad garantizada y flexibilidad para adaptarse a tus necesidades.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Century Gothic', sans-serif;
+            background: #f8f7f9;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .servicios {
+            margin-top: 40px;
+            padding-bottom: 100px;
+        }
+
+        .servicios h2 {
+            font-size: 36px;
+            color: #62621f;
+            font-family: 'Baskerville Old Face', serif;
+            margin-bottom: 40px;
+        }
+
+        .contenedor-servicios {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .servicio {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            width: 30%;
+            min-width: 300px;
+            padding: 30px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-align: center;
+            border: 2px solid #cfa52f;
+        }
+
+        .servicio:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .servicio img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .servicio h3 {
+            font-size: 20px;
+            color: #cfa52f;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .servicio p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 900px) {
+            .contenedor-servicios {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .servicio {
+                width: 90%;
+            }
+        }
+    </style>
+
+</body>
+</html>

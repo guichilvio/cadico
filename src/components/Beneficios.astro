@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneficios de Elegirnos</title>
+   
+</head>
+<body>
+    <div id="beneficios"></div>
+    <div class="container">
+        <h2>Beneficios de Elegirnos</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Desarrollo de Vivienda</h3>
+                <p>Cada proyecto de CADICO se realiza bajo estrictos estándares de calidad, asegurando que cada detalle esté cuidado para tu satisfacción y seguridad.</p>
+            </div>
+            <div class="card">
+                <h3>Plusvalía Constante</h3>
+                <p>Nuestros desarrollos están ubicados en zonas estratégicas, lo que garantiza un aumento en su valor a lo largo del tiempo, asegurando una inversión inteligente y duradera.</p>
+            </div>
+            <div class="card">
+                <h3>Seguridad Garantizada</h3>
+                <p>Nos comprometemos a ofrecer entornos seguros para nuestros clientes, aplicando las mejores prácticas en construcción y diseño. Tu tranquilidad es nuestra misión.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="contacto"></div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="logo">
+                <img src="CADICO.png" alt="Grupo CADICO">
+            </div>
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>Teléfono: 8711581546</li>
+                        <li>Email: g.melendez@grupocadico.com</li>
+                        <li>Ubicación: González Ortega #132, Col. Centro 27000</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Síguenos</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=61570944697596" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/grupocadico/" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 Grupo CADICO. Todos los derechos reservados.
+        </div>
+    </footer>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f8f7f9;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: auto;
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #625e37;
+            font-size: 42px;
+            margin-bottom: 30px;
+            font-family: 'Baskerville Old Face', serif;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+            width: 30%;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: 2px solid #cfa52f;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h3 {
+            color: #cfa52f;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .card p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: #625e37;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer .logo img {
+            width: 180px;
+        }
+
+        .footer .footer-columns {
+            display: flex;
+            gap: 50px;
+        }
+
+        .footer-column {
+            text-align: left;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #cfa52f;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #cfa52f;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 14px;
+            border-top: 1px solid #cfa52f;
+            padding-top: 10px;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="PT 3.jpg" alt="Hogar ideal">
+          <div class="text-box">
+            <h2>Tu hogar ideal te espera</h2>
+            <p>Explora nuestras opciones de vivienda que combinan calidad, diseño y accesibilidad.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="S3.jpg" alt="Negocios esenciales">
+          <div class="text-box">
+            <h2>Negocios en ubicaciones esenciales</h2>
+            <p>Ubica tu empresa en un sitio prominente que atraerá a un creciente número de consumidores.</p>
+          </div>
+        </div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <script type="text/javascript">
+      let index = 0;
+      function moveSlide(step) {
+        const slides = document.querySelectorAll(".slide");
+        index = (index + step + slides.length) % slides.length;
+        document.querySelector(".slider").style.transform = `translateX(-${index * 100}%)`;
+      }
+      setInterval(() => moveSlide(1), 5000); 
+    </script>
+
+<style>
+  .slider-container {
+    position: relative;
+    max-width: 100%; 
+    margin: auto;
+    overflow: hidden;
+    background: #f8f7f9;
+    padding: 30px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+  }
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slide {
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    background: white;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  .slide img {
+    width: 50%;
+    height: 350px; 
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  } 
+  .text-box {
+    width: 50%;
+    padding: 30px;
+    text-align: left;
+    font-family: 'Century Gothic', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+  }
+  .text-box h2 {
+    color: #62621f;
+    font-family: 'Baskerville Old Face', serif;
+    font-size: 24px;
+  }
+  .text-box p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .prev { left: 20px; }
+  .next { right: 20px; }
+  .prev:hover, .next:hover {
+    background: rgba(98, 94, 55, 0.9);
+    transform: scale(1.1);
+  }
+  .slider-container::after {
+    content: "";
+    display: block;
+    height: 50px;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+  </body>
+</html>

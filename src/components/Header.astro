@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadico - Inmobiliaria y Desarrollo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8f7f9;
+            color: #333;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: transparent;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+        }
+
+        .menu.scrolled {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 8px 18px;
+        }
+
+        .menu .logo img {
+            width: 180px;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu ul li {
+            margin: 0 10px;
+        }
+
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .menu ul li a:hover {
+            color: #cfa52f;
+        }
+
+        .menu .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .fondo {
+            height: 100vh;
+            background: url('hero_1.jpg') no-repeat center center/cover;
+            position: relative;
+        }
+
+        @media (max-width: 900px) {
+            .menu {
+                padding: 8px 15px;
+            }
+
+            .menu .logo img {
+                width: 140px;
+            }
+
+            .menu .hamburger {
+                display: block;
+            }
+
+            .menu ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                background: rgba(0, 0, 0, 0.9);
+                width: 180px;
+                text-align: center;
+                padding: 8px 0;
+                border-radius: 8px;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .menu ul.show {
+                display: flex;
+            }
+
+            .menu ul li {
+                margin: 8px 0;
+                padding: 10px 0;
+            }
+        }
+    </style>
+    <script type="text/javascrip">
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.location.hash) {
+                setTimeout(function() {
+                    const targetElement = document.querySelector(window.location.hash);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 50,
+                            behavior: "smooth"
+                        });
+                    }
+                }, 500);
+            }
+        });
+
+        window.addEventListener('scroll', function() {
+            var menu = document.querySelector('.menu');
+            var fondo = document.querySelector('.fondo');
+            var fondoBottom = fondo.offsetTop + fondo.offsetHeight;
+            if (window.scrollY > fondoBottom - 100) {
+                menu.classList.add('scrolled');
+            } else {
+                menu.classList.remove('scrolled');
+            }
+        });
+
+        function toggleMenu() {
+            let menuList = document.querySelector('.menu ul');
+            menuList.classList.toggle('show');
+        }
+
+        document.addEventListener('click', function(event) {
+            let menuList = document.querySelector('.menu ul');
+            let hamburger = document.querySelector('.hamburger');
+            if (!menuList.contains(event.target) && !hamburger.contains(event.target)) {
+                menuList.classList.remove('show');
+            }
+        });
+    </script>
+</head>
+<body>
+    <nav class="menu">
+        <div class="logo">
+            <img src="CADICO.png" alt="CADICO">
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul>
+            <li><a class="nav-link" href="#quienessomos">QUIÉNES SOMOS</a></li>
+            <li><a class="nav-link" href="#Mision">MISIÓN Y VISIÓN</a></li>
+            <li><a class="nav-link" href="#Servicios">SERVICIOS</a></li>
+            <li><a class="nav-link" href="#contacto">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <section class="fondo"></section>
+</body>
+</html>

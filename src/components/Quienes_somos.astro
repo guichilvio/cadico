@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos - CADICO</title>
+    
+</head>
+<body>
+
+    <div id="quienessomos"></div>
+    <section class="quienes-somos">
+        <h2>QUIÉNES SOMOS</h2>
+        <div class="contenido">
+            <div class="texto">
+                <p>
+                    Grupo Inmobiliario CADICO es una empresa mexicana fundada en marzo de 2019, 
+                    especializada en el desarrollo de viviendas horizontales y locales comerciales. 
+                    Nuestro objetivo es brindar soluciones inmobiliarias accesibles y seguras para todos los niveles 
+                    socioeconómicos, garantizando calidad y confianza en cada proyecto.
+                </p>
+            </div>
+            <div class="imagen">
+                <img src="quienes somos.jpg" alt="Imagen de Quiénes Somos">
+            </div>
+        </div>
+    </section>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Century Gothic', sans-serif;
+            background: #f8f7f9;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .quienes-somos {
+            width: 100%;
+            padding: 80px 10%;
+            background: white;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+        }
+
+        .quienes-somos h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #62621f;
+            font-family: 'Baskerville Old Face', serif;
+            margin-bottom: 40px;
+        }
+
+        .contenido {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .texto {
+            flex: 1;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            max-width: 50%;
+            text-align: left;
+        }
+
+        .imagen {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .imagen img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 900px) {
+            .contenido {
+                flex-direction: column;
+                text-align: center;
+            }
+            .texto {
+                max-width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .imagen {
+                justify-content: center;
+            }
+        }
+    </style>
+
+</body>
+</html>
